@@ -1,17 +1,17 @@
- var map;
+var map;
  var markers = [];
  var infoWindow;
  var currLatitude;
  var currLongitude;
 
  function initMap() {
-    var New_York = {
+    var Pune = {
         lat: 40.7128,
         lng: -74.0060,
     }
-
+     
      map = new google.maps.Map(document.getElementById('map'), {
-     center: New_York,
+     center: Pune,
      zoom: 15,
      styles: [
         {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -118,9 +118,9 @@
         hospitalsList += `
         <div class="hospital-container">
             <div class="hospital-container-background">
-                <div class="hospital-info-container">
+                <div class="hospital-info-container"> 
                     <div class="hospital-address">
-                        <span>${name}</span>
+                        <span>${name}</span> 
                         <span>${address}</span>
                         <span>${zipCode}</span>
 						</div>
@@ -154,7 +154,7 @@
     numBed = hospital.numBeds;
 	emptyBed=hospital.emptyBeds;
     var rating = hospital.rating;
-
+    
     createMarker(latlng, name, address, phoneNumber, numBed, emptyBed,index, rating);
     setMarkerDirections(hospital.lat, hospital.lng, index);
     setMarkerAnimations(markers[index], search)
@@ -261,7 +261,7 @@ function searchHospitals() {
     search = true;
     clearLocations();
 } else {
-    foundHospitals = hospitals;
+    foundHospitals = hospitals; 
 }
 displayhospitals(foundHospitals);
 showhospitalsMarker(foundHospitals, search);
@@ -275,9 +275,9 @@ function saveCurrentLocation(position) {
 
 function errorHandler(err) {
     if(err.code == 1) {
-       alert("Welcome to COVID-19 Hospital Tracker");
+       alert("Welcome");
     } else if( err.code == 2) {
-      alert("Welcome to COVID-19 Hospital Tracker");
+      alert("Welcome");
     }
  }
 
@@ -293,7 +293,7 @@ function getLocation(){
  }
 
 function setOnClickListenerAddress(lat, lng) {
-
+    
             var url = "https://www.google.com/maps/dir/?api=1";
             var origin = "&origin=" + currLatitude + "," + currLongitude;
             var destination = "&destination=" + lat + "," + lng;
@@ -301,9 +301,5 @@ function setOnClickListenerAddress(lat, lng) {
             console.log(newUrl);
             window.open(newUrl, '_blank');
 
-
+            
 }
-
-
-
-/* experimental code here */

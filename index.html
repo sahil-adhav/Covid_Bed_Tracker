@@ -2,15 +2,15 @@
 <html>
     <head>
         <title>
-            COVID-19 HOSPITAL TRACKER
+            CoVID-19 Hospital Locator
         </title>
         <link rel="stylesheet" href="style/style.css">
         <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
         <script src="js/covid-hospitals-list.js"></script>
         <script src="js/index.js"></script>
-        <link rel = "icon" href = "https://media.gettyimages.com/illustrations/coronavirus-particle-illustration-illustration-id1205739966?s=2048x2048"
-        type = "image/x-icon">
-
+        <link rel = "icon" href = "https://media.gettyimages.com/illustrations/coronavirus-particle-illustration-illustration-id1205739966?s=2048x2048" 
+        type = "image/x-icon"> 
+        
         <style>
             .checked {
               color: orange;
@@ -19,11 +19,11 @@
     </head>
     <body>
         <div class="title">
-            COVID-19 HOSPITAL BED TRACKER
+            CoVID-19 Hospitals In Pune
         </div>
         <div class="search-container"  >
             <div class="search">
-                <input id="zip-code-input"  type="text" placeholder="ENTER ZIP-CODE / PIN-CODE"></input>
+                <input id="zip-code-input"  type="text" placeholder="enter pincode in pune"></input>
                 <i class="fas fa-search" onclick="searchHospitals()"></i>
             </div>
         </div>
@@ -32,7 +32,7 @@
                 <!--innerHTML populated by .js-->
             </div>
         </div>
-
+       
         <div id="map"></div>
        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDV8aox-j9OQlYN_WTuKzQR9ER1nUswpVM&callback=initMap"
           async defer></script>
